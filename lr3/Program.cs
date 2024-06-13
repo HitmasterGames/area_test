@@ -6,12 +6,12 @@ namespace lr3
     {
         static void Main(string[] args)
         {
-            double a, b, Rad;
+            double a, b, Rad, A, H;
             int variant;
 
             Console.WriteLine("1. Прямоугольник");
             Console.WriteLine("2. Круг");
-            //Console.WriteLine("3. Треугольник");
+            Console.WriteLine("3. Треугольник");
             //Console.WriteLine("4. Трапеция");
             //Console.WriteLine("5. Сектор");
 
@@ -42,6 +42,18 @@ namespace lr3
                         Rad = Convert.ToDouble(temp);
                         Console.WriteLine("Площадь круга = " + 4 * Math.Atan(1.0) * Math.Pow(Rad, 2.0));
                         break;
+                    case 3:
+                        Console.Write("Основание A = ");
+                        temp = Console.ReadLine();
+                        A = Convert.ToDouble(temp); 
+                        Console.Write("Высота H = ");
+                        temp = Console.ReadLine();
+                        H = Convert.ToDouble(temp);
+                        Console.WriteLine("Площадь треугольника = "+(A*H)/2);
+                        Console.ReadKey();
+                        
+                        break;
+
 
                     default: Console.WriteLine("Выбор неверен "); break;
                 }
